@@ -1,0 +1,11 @@
+{
+    "name": "simple-express",
+    "description": "Simple Express template server",
+    "version": "0.0.1",
+    "dependencies": {
+        "express": "3.x",
+        "nodemon": "0.6.19",
+        "consolidate": "0.4.0",
+        "mustache": "0.5.2"
+    }
+}
