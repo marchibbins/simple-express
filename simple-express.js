@@ -21,15 +21,20 @@ app.set('views', __dirname + '/views');
 app.use("/static", express.static(__dirname + '/static'));
 
 // Simple JSON file parser
-var getJSON = function(path) {
+var get_JSON = function(path) {
     var fileContents = fs.readFileSync(path, 'utf8');
     return JSON.parse(fileContents);
 }
 
+// Wrapper for template render and JSON parser
+var render = function(res, view, json_path) {
+    var data = get_JSON(json_path);
+    res.render(view, data);
+};
+
 // Routes
 app.get('/', function(req, res) {
-    var data = getJSON('views/simple.json');
-    res.render('simple', data);
+    render(res, 'simple', 'data/simple.json');
 });
 
 // Go!
