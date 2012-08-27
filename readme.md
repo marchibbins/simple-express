@@ -1,4 +1,4 @@
-##Simple Express template server
+## Simple Express template server
 
 A simple [Express](http://expressjs.com/) framework for rendering templates with JSON data using [Mustache](http://mustache.github.com/) and a handful of Node.js tools.
 
